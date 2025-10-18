@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" spacing="10.0" style="-fx-background-color: #f5f5f5;" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dk.easv.todoappexercise403.HelloController">
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   </padding>
+   <children>
+      <Label text="Todo Application" textFill="#333333">
+         <font>
+            <Font name="System Bold" size="28.0" />
+         </font>
+         <VBox.margin>
+            <Insets bottom="10.0" />
+         </VBox.margin>
+      </Label>
+      
+      <Button fx:id="btnAddNew" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onAddNewTodo" style="-fx-background-color: #4caf50; -fx-text-fill: white; -fx-font-size: 14px; -fx-font-weight: bold; -fx-background-radius: 5;" text="+ Add New Todo">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+         <VBox.margin>
+            <Insets bottom="15.0" />
+         </VBox.margin>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </Button>
+      
+      <HBox prefHeight="450.0" prefWidth="860.0" spacing="15.0" VBox.vgrow="ALWAYS">
+         <children>
+            <VBox prefHeight="450.0" prefWidth="280.0" spacing="10.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <Label text="Todo" textFill="#333333">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <ListView fx:id="lvTodo" editable="true" prefHeight="380.0" prefWidth="280.0" style="-fx-background-color: white; -fx-border-color: #ddd; -fx-border-radius: 5; -fx-background-radius: 5;" VBox.vgrow="ALWAYS" />
+                  <Button fx:id="btnMoveToProgress" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onMoveToInProgress" style="-fx-background-color: #2196f3; -fx-text-fill: white; -fx-background-radius: 5;" text="Move to In Progress →">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+                     </padding>
+                  </Button>
+               </children>
+            </VBox>
+            
+            <VBox prefHeight="450.0" prefWidth="280.0" spacing="10.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <Label text="In Progress" textFill="#333333">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <ListView fx:id="lvInProgress" prefHeight="380.0" prefWidth="280.0" style="-fx-background-color: white; -fx-border-color: #ddd; -fx-border-radius: 5; -fx-background-radius: 5;" VBox.vgrow="ALWAYS" />
+                  <HBox spacing="10.0">
+                     <children>
+                        <Button fx:id="btnMoveBackToTodo" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onMoveBackToTodo" style="-fx-background-color: #ff9800; -fx-text-fill: white; -fx-background-radius: 5;" text="← Back to Todo" HBox.hgrow="ALWAYS">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+                           </padding>
+                        </Button>
+                        <Button fx:id="btnMoveToDone" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onMoveToDone" style="-fx-background-color: #4caf50; -fx-text-fill: white; -fx-background-radius: 5;" text="Move to Done →" HBox.hgrow="ALWAYS">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+                           </padding>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            
+            <VBox prefHeight="450.0" prefWidth="280.0" spacing="10.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <Label text="Done" textFill="#333333">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <ListView fx:id="lvDone" prefHeight="380.0" prefWidth="280.0" style="-fx-background-color: white; -fx-border-color: #ddd; -fx-border-radius: 5; -fx-background-radius: 5;" VBox.vgrow="ALWAYS" />
+                  <Button fx:id="btnMoveBackToProgress" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onMoveBackToInProgress" style="-fx-background-color: #ff9800; -fx-text-fill: white; -fx-background-radius: 5;" text="← Back to In Progress">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+                     </padding>
+                  </Button>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</VBox>
